@@ -112,7 +112,12 @@ public enum CliArgDef {
     AUTHTOKEN("token", "auth-token",
             "String: API operation authorization code",
             "API operation authorization code,"
-                    + " required when adding or modifying, optional when querying");
+                    + " required when adding or modifying, optional when querying"),
+    TOPIC("topic", "topicName",
+            "tubemq-ctl topic operated topic.", ""),
+    TOPICCONFIGFILE("config",
+            "topicConfig",
+            "topic config file path, json format(create|delete|modify).", "");
 
     CliArgDef(String opt, String longOpt, String optDesc) {
         this(opt, longOpt, false, "", optDesc);
